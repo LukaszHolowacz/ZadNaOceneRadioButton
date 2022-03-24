@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             if(mezczyzna.isChecked){
                 podsumowanie += "Mężczyzna\n"
             }
+            if(niewiadomo.isChecked){
+                podsumowanie += "Nie wiem kim ty jestes\n"
+            }
             val wiek = liczba.text.toString().toInt()
             if(wiek < 1){
                 error("Nie możesz mieć ujemnego wieku")
