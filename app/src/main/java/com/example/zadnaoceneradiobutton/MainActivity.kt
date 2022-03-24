@@ -30,14 +30,17 @@ class MainActivity : AppCompatActivity() {
             muzyka.isEnabled = false
             turystyka.isEnabled = false
             gry.isEnabled = false
+
+            podsumowanie += "Informacje, które podałeś"
+
             if(kobieta.isChecked){
-                podsumowanie += "Kobieta\n"
+                podsumowanie += "Kobieta\n\n"
             }
             if(mezczyzna.isChecked){
-                podsumowanie += "Mężczyzna\n"
+                podsumowanie += "Mężczyzna\n\n"
             }
             if(niewiadomo.isChecked){
-                podsumowanie += "Nie wiem kim ty jestes\n"
+                podsumowanie += "Nie wiem kim ty jestes\n\n"
             }
             val wiek = liczba.text.toString().toInt()
             if(wiek < 1){
@@ -47,10 +50,10 @@ class MainActivity : AppCompatActivity() {
                 error("Bez Przesady")
             }
             if(wiek == 1){
-                podsumowanie = podsumowanie + wiek.toString() + "rok\nZainteresowania:\n"
+                podsumowanie = podsumowanie + wiek.toString() + "rok\nZainteresowania:\n\n"
             }
             if(wiek == 2 || wiek == 3|| wiek == 4){
-                podsumowanie = podsumowanie + wiek.toString() + "lata\nZainteresowania:\n"
+                podsumowanie = podsumowanie + wiek.toString() + "lata\nZainteresowania:\n\n"
             }
             if(wiek>4){
                 podsumowanie = podsumowanie + wiek.toString() + "lat\nZainteresowania:\n"
